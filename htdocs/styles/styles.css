@@ -1,0 +1,284 @@
+/* --- CSS Variables and Font Setup --- */
+:root {
+  --primary-color: #0d47a1; /* Deep, professional blue */
+  --secondary-color: #1976d2; /* Lighter, vibrant blue */
+  --accent-color: #ffc107; /* Warm gold/yellow */
+  --background-color: #f8f9fa; /* Soft, light gray */
+  --text-color: #343a40; /* Dark charcoal */
+  --card-background: #ffffff;
+  --font-heading: 'CustomFont', 'Georgia', serif; /* Use your custom font here */
+  --font-body: 'Segoe UI', 'Roboto', 'Helvetica Neue', sans-serif;
+}
+
+/* Import your custom font */
+@font-face {
+  font-family: 'CustomFont';
+  src: url('font.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* --- General Reset & Body Styles --- */
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-body);
+  background-color: var(--background-color);
+  color: var(--text-color);
+  line-height: 1.6;
+}
+
+/* --- Header & Navigation --- */
+header {
+  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+  color: white;
+  text-align: center;
+  padding: 4rem 1rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+header h1 {
+  margin: 0;
+  font-family: var(--font-heading);
+  font-size: 4rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+nav {
+  background-color: var(--primary-color);
+  display: flex;
+  justify-content: center;
+  padding: 1rem 0;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.active {
+background-color: var(--accent-color);
+  color: var(--primary-color);
+}
+
+.inactive {
+	background-color: var(--primary-color);
+	color: white;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 0.75rem 1.5rem;
+  border-radius: 50px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  margin: 0 0.5rem;
+}
+
+nav a:hover, nav a:focus {
+  background-color: var(--accent-color);
+  color: var(--primary-color);
+}
+
+/* --- General Section & Heading Styles --- */
+.section {
+  padding: 4rem 1rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+h2 {
+  text-align: center;
+  font-family: var(--font-heading);
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  color: var(--primary-color);
+}
+
+/* --- Page 01: Home Page Specifics --- */
+.media-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  align-items: center;
+}
+
+.video-box video {
+  width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+  display: block;
+}
+
+.caption {
+  text-align: center;
+  margin-top: 1rem;
+  font-style: italic;
+  color: #6c757d;
+}
+
+.image-box {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+
+.image-box img {
+  width: 100%;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.image-box img:hover {
+  transform: scale(1.05) rotate(2deg);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+/* Resources Grid Cards */
+.resources-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  margin-top: 4rem;
+}
+
+.card-link, .card.button {
+  background-color: var(--card-background);
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  text-align: center;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1rem;
+  color: var(--primary-color);
+  transition: all 0.3s ease;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.card-link:hover, .card.button:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  border-color: var(--accent-color);
+  color: #000;
+  background-color: #fff9e6;
+}
+
+.card.button {
+  font-family: inherit; /* Ensure button uses the same font */
+}
+
+
+/* --- Page 02: Destinations List --- */
+.section ul {
+  list-style: none;
+  padding: 0;
+  max-width: 600px;
+  margin: 2rem auto;
+}
+
+.section li {
+  background: var(--card-background);
+  margin-bottom: 1rem;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+  font-size: 1.2rem;
+  font-weight: 500;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  border-left: 5px solid var(--secondary-color);
+}
+
+.section li:hover {
+  transform: translateX(10px);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.12);
+  border-left-color: var(--accent-color);
+}
+
+
+/* --- Page 03: Gallery --- */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+}
+
+.gallery img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 12px;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.15);
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.gallery img:hover {
+  transform: scale(1.03);
+  filter: brightness(1.1);
+  box-shadow: 0 12px 24px rgba(0,0,0,0.25);
+}
+
+/* --- Footer --- */
+footer {
+  text-align: center;
+  padding: 2rem 1rem;
+  background-color: #343a40;
+  color: #adb5bd;
+  margin-top: 4rem;
+}
+
+/* --- Responsive Design --- */
+@media (max-width: 992px) {
+  .media-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  header h1 {
+    font-size: 2.5rem;
+  }
+
+  h2 {
+    font-size: 2rem;
+  }
+  
+  nav {
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+  }
+
+  nav a {
+    margin: 0.25rem 0;
+    width: 80%;
+    text-align: center;
+  }
+
+  .image-box {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .resources-grid {
+    grid-template-columns: 1fr;
+  }
+}

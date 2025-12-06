@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ExploreWorld - Travel With Us</title>
+    <link rel="stylesheet" href="styles/styles.css" />
+</head>
+
+<body>
+
+    <header>
+        <h1>ExploreWorld</h1>
+    </header>
+
+    <nav>
+        <a href="index.html" class="active">Home</a>
+        <a href="destinations.html" class="inactive">Destinations</a>
+        <a href="gallery.html" class="inactive">Gallery</a>
+    </nav>
+
+    <section class="section">
+        <h2>Experience the World</h2>
+        <div class="media-grid">
+            <!-- Left: Video -->
+            <div class="video-box">
+                <video controls poster="poster.jpg">
+                    <source src="resources/intro.mp4" type="video/mp4" />
+                    Your browser does not support the video tag.
+                </video>
+                <p class="caption">Watch Our Travel Teaser</p>
+            </div>
+
+            <!-- Right: Gallery -->
+            <div class="image-box">
+                <a href="resources/paris.jpg"><img src="resources/paris.jpg" alt="Paris" /></a>
+                <a href="resources/bali.jpeg"><img src="resources/bali.jpeg" alt="Bali" /></a>
+                <a href="resources/newyork.jpeg"><img src="resources/newyork.jpeg" alt="New York" /></a>
+                <a href="resources/newyork.jpeg"><img src="resources/newyork.jpeg" alt="New York" /></a>
+                <a href="resources/paris.jpg"><img src="resources/paris.jpg" alt="Paris" /></a>
+                <a href="resources/bali.jpeg"><img src="resources/bali.jpeg" alt="Bali" /></a>
+                <p class="caption">Our Destinations</p>
+
+            </div>
+        </div>
+
+        <!-- Buttons and Links in Stylish Grid -->
+        <!-- index.html -->
+<!-- index.html -->
+<div class="resources-grid">
+    <a href="resources/logo.svg" class="card-link">
+        🖼️ View svg (.svg)
+    </a>
+
+    <!-- REMOVED 'download' attribute to open in browser viewer -->
+    <a href="resources/brochure.pdf" class="card-link">
+        📄 View pdf (.pdf)
+    </a>
+
+    <button onclick="window.open('resources/song.mp3')" class="card button">
+        🎵 Play Theme Song (.mp3)
+    </button>
+
+    <!-- REMOVED 'download' attribute -->
+    <a href="resources/data.json" class="card-link">
+        📊 View Trip Data (.json)
+    </a>
+
+    <button onclick="window.open('resources/travel.gif')" class="card button">
+        🌀 View Animation (.gif)
+    </button>
+
+    <a href="resources/travel.webp" class="card-link">
+        🖼️ View WebP Image (.webp)
+    </a>
+    
+    <a href="resources/1.png" class="card-link">
+        🖼️ View png (.png)
+    </a>
+    
+    <a href="resources/paris.jpg" class="card-link">
+        🖼️ View jpg (.jpg)
+    </a>
+    
+    <a href="resources/bali.jpeg" class="card-link">
+        🖼️ View jpeg (.jpeg)
+    </a>
+    
+    <a href="resources/intro.mp4" class="card-link">
+        🎬 View video (.mp4)
+    </a>
+
+    <a href="resources/icon.ico" class="card-link">
+        🧩 View Icon (.ico)
+    </a>
+
+    <a href="styles/styles.css" class="card-link">
+        🎨 View Stylesheet (.css)
+    </a>
+
+    <a href="scripts/script.js" class="card-link">
+        ⚙️ View Script (.js)
+    </a>
+    
+    <a href="resources/1.txt" class="card-link">
+        📄 View text file (.txt)
+    </a>
+    
+    <a href="resources/form1.php" class="card-link">
+        🧮 Sum Calculator (.php)
+    </a>    
+    
+    <button onclick="showAlert()" class="card button">
+        🎉 Click Me for alert!!!
+    </button>
+</div>
+    </section>
+
+    <footer>
+        &copy; 2025 ExploreWorld Travels. All rights reserved.
+    </footer>
+
+    <script src="scripts/script.js"></script>
+    <script>
+	    function showAlert() {
+		alert("🌍 Ready for your next adventure?");
+	    }
+    </script>
+</body>
+
+</html>

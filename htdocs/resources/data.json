@@ -1,0 +1,23 @@
+{
+    "destinations": [
+        {
+            "name": "Paris",
+            "country": "France",
+            "continent": "Europe"
+        },
+        {
+            "name": "Bali",
+            "country": "Indonesia",
+            "continent": "Asia"
+        },
+        {
+            "name": "New York",
+            "country": "USA",
+            "continent": "North America"
+        }
+    ],
+    "contact": {
+        "email": "explore@world.com",
+        "phone": "+1 234 567 8900"
+    }
+}
